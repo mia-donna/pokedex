@@ -11,7 +11,11 @@ import Data.Aeson.Types
 
 data Pokeinfo = Pokeinfo {
     id :: Int,
-    name :: String
+    name :: String,
+    img :: String,
+    height :: String,
+    weight :: String,
+    candy :: String
 } deriving (Show, Generic)
 
 instance FromJSON Pokeinfo
