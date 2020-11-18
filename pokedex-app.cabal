@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 88c532d4095b91070337b44a5260bf1f3fc25f26b75a20cb3585969485e8faa7
+-- hash: b3c8fea95704218552e33943db1ca1dac09bfc185b15871038affd9cd2f8a953
 
 name:           pokedex-app
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       HTTP
+      Parse
   other-modules:
       Paths_pokedex_app
   hs-source-dirs:
