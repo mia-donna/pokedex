@@ -1,0 +1,77 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 88c532d4095b91070337b44a5260bf1f3fc25f26b75a20cb3585969485e8faa7
+
+name:           pokedex-app
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/pokedex-app#readme>
+homepage:       https://github.com/githubuser/pokedex-app#readme
+bug-reports:    https://github.com/githubuser/pokedex-app/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/pokedex-app
+
+library
+  exposed-modules:
+      HTTP
+  other-modules:
+      Paths_pokedex_app
+  hs-source-dirs:
+      src
+  build-depends:
+      HDBC
+    , HDBC-sqlite3
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , http-conduit
+  default-language: Haskell2010
+
+executable pokedex-app-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_pokedex_app
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HDBC
+    , HDBC-sqlite3
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , http-conduit
+    , pokedex-app
+  default-language: Haskell2010
+
+test-suite pokedex-app-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_pokedex_app
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HDBC
+    , HDBC-sqlite3
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , http-conduit
+    , pokedex-app
+  default-language: Haskell2010
